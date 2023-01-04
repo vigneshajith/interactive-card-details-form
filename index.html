@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Interactive card details form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="flex">
+      <section class="section1">
+        <div class="container position">
+          <div class="front-card">
+            <div class="front-card__circles">
+              <div class="front-card__filled-circle"></div>
+              <div class="front-card__outline-circle"></div>
+            </div>
+            <p class="front-card__numbers">0000 0000 0000 0000</p>
+            <div class="front-card__bottom-texts">
+              <span class="front-card__btn-text">Jane Appleseed</span>
+              <span class="front-card__btn-num"><span class="ex-mm">00</span>/<span class="ex-yy">00</span> </span>
+            </div>
+          </div>
+          <div class="back-card row">
+            <img
+              src="images/bg-card-back.png"
+              class="back-card__img cardimg"
+              alt="atm card back side"
+            />
+            <p class="back-card__text">000</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section2">
+        <div class="container">
+          <form class="firstform">
+            <lable for="username">Cardholder Name</lable>
+
+            <input
+              type="text"
+              id="username"
+              name="userName"
+              class="inputstyle"
+              placeholder=" e.g. Jane Appleseed"
+            />
+            <p id="error1" class="errormsg"></p> <br />
+            <lable for="cardnumber">Card Number</lable>
+            <input
+              type="text"
+              id="cardnumber"
+              class="inputstyle"
+              name="cardNumber"
+              placeholder=" e.g. 1234 5678 9123 0000"
+              maxlength="19"
+            />
+            <p id="error2" class="errormsg"></p> <br />
+
+            <div class="mergeinputs">
+              <div class="expdate">
+                <label>Exp. Date (MM/YY)</label>
+                <div class="expdate_flex">
+                  <input
+                    type="text"
+                    class="mm inputstyle"
+                    placeholder="MM"
+                    name="mm"
+                    id="Month"
+                    maxlength="2"
+                  />
+                  <input
+                    type="text"
+                    class="yy inputstyle"
+                    placeholder="YY"
+                    name="yy"
+                    id="year"
+                    maxlength="2"
+
+                  />
+           
+
+                </div>
+                 <p id="error3" class="errormsg"></p> 
+              </div>
+              <div class="mergeinputs__cvc">
+                <label for="cvc">CVC</label><br>
+                <input
+                  type="text"
+                  id="cvc"
+                  class="inputstyle"
+                  placeholder="e.g. 123"
+                  name="cvc"
+                  maxlength="3"
+                />
+            <p id="error4" class="errormsg"></p> 
+
+              </div>
+            </div>
+            <input type="submit" class="submit btn" value="Confirm" />
+
+          </form>
+          <!-- Completed state start -->
+          <div class="conform-messeage display">
+            <img class="conform__svg" src="images/icon-complete.svg" alt="icon for tick">
+            <h1 class="conform__title">Thank you!</h1>
+            <p class="conform__text">We've added your card details</p>
+            <button class="continue btn">Continue</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">vignesh</a>.
+      </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
